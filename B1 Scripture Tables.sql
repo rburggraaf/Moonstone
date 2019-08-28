@@ -9,8 +9,8 @@
 ----> Create Schema Script (Lands) <----
 
 ----> Spiritual Schema <----
-CREATE SCHEMA Spiritual;
-GO
+--CREATE SCHEMA Spiritual;
+--GO
 
 
 
@@ -20,7 +20,8 @@ GO
 DROP TABLE IF EXISTS Spiritual.Scriptures
 
 CREATE TABLE Spiritual.Scriptures (
-	Scriptures_Key INT IDENTITY (10000,1)
+	Scriptures_Table_Key INT IDENTITY (10000,1)
+	, Scripture_Key INT
 	, Scriptures_Reference NVARCHAR(500)
 	, Scriptures_Text NVARCHAR(4000)
 	, Ratings_Key INT
@@ -87,19 +88,34 @@ GO
 
 
 INSERT INTO Spiritual.Scriptures (
-	Scriptures_Reference
+	Scripture_Key
+	, Scriptures_Reference
 	, Scriptures_Text
 	, Ratings_Key
 	, Scriptures_Input_Date
 	, Scriptures_Update_Date
 )
 VALUES ( 
-		'2 Nephi 2:4' ----> Scriptures_Reference
+		10000 ----> Scripture_Key
+		, '2 Nephi 2:4' ----> Scriptures_Reference
 		, '…And the way is prepared from the fall of man, and salvation is free.' ----> Scriptures_Text
 		, 1 ----> Ratings_Key
 		, '2019-08-27' ----> Scriptures_Input_Date
 		, GETDATE() ----> Scriptures_Update_Date
-	);
+		)
+		, ( 
+		10001 ----> Scripture_Key
+		, 'Numbers 16:26,32' ----> Scriptures_Reference
+		, '…Depart, I pray you, from the tents of these wicked men,
+			and touch nothing of theirs, lest ye be consumed in all their sins.
+			...the earth opened her mouth, and swallowed them up, 
+			and their houses, and all the men that appertained 
+			unto Korah, and all thier goods.' ----> Scriptures_Text
+		, 1 ----> Ratings_Key
+		, '2019-08-28' ----> Scriptures_Input_Date
+		, GETDATE() ----> Scriptures_Update_Date
+		)
+;
 GO
 		
 
@@ -109,8 +125,8 @@ SELECT *
 */
 
 ----> Set Scripture Key to be used in the insert statements <----
-DECLARE @Scriptures_Key INT;
-SET @Scriptures_Key = (SELECT MAX(Scriptures_Key) FROM Spiritual.Scriptures);
+--DECLARE @Scriptures_Key INT;
+--SET @Scriptures_Key = (SELECT MAX(Scriptures_Key) FROM Spiritual.Scriptures);
 
 
 INSERT INTO Spiritual.Scriptures_Notes (
@@ -120,23 +136,28 @@ INSERT INTO Spiritual.Scriptures_Notes (
 	, Notes_Update_Date
 )
 VALUES (
-		@Scriptures_Key ----> Scriptures_Key
-		, 'Salvation does not just mean the resurection, but the cleansing of our sins as well.' ----> Notes_Text
+		10000 ----> Scriptures_Key
+		, 'Salvation does not just mean the resurection, but the cleansing of our sins as well.
+			Christ has already paid the price to remove all the effects of the fall.
+			Salvation is free because there is nothing left for us to pay.
+			' ----> Notes_Text
 		, '2019-08-27' ----> Notes_Input_Date
 		, GETDATE() ----> Notes_Update_Date
 		)
 		, (
-		@Scriptures_Key ----> Scriptures_Key
-		, 'Christ has already paid the price to remove all the effects of the fall.' ----> Notes_Text
-		, '2019-08-27' ----> Notes_Input_Date
+		10001 ----> Scriptures_Key
+		, 'This scripture touched strongly my heart and spoke to what I should do.
+			I was to depart from the groups and individuals associated with being transgender.
+			and not be associated with any of them or I would face the same destruction that 
+			awaits them.
+			I will remove myself from all Facebook groups and remove all of the transgender 
+			friends that I have. I know this is a drastic move, but if I don''t do it
+			I face distruction.
+			' ----> Notes_Text
+		, '2019-08-28' ----> Notes_Input_Date
 		, GETDATE() ----> Notes_Update_Date
 		)
-		, (
-		@Scriptures_Key ----> Scriptures_Key
-		, 'Salvation is free because there is nothing left for us to pay.' ----> Notes_Text
-		, '2019-08-27' ----> Notes_Input_Date
-		, GETDATE() ----> Notes_Update_Date
-	);
+;
 
 /*
 SELECT *
@@ -166,14 +187,23 @@ INSERT INTO Spiritual.Scriptures_Links (
 	, Links_Update_Date
 )
 VALUES (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, '2 Nephi 25:27' ----> Links_Reference
 		, 'Wherefore, we speak concerning the law that our children may know the deadness of the law;
 			and they, by knowing the deadness of the law, may look forward unto that life which is in Christ,
 			and know for what end the law was given…' ----> Links_Text
 		, '2019-08-27' ----> Links_Input_Date
 		, GETDATE() ----> Links_Update_Date
-	);
+		)
+		, (
+		10001 ----> Scriptures_Key
+		, '2 Nephi 5:5' ----> Links_Reference
+		, '...the Lord did warn me, that I, Nephi, should depart from them and flee into the wilderness...
+			' ----> Links_Text
+		, '2019-08-28' ----> Links_Input_Date
+		, GETDATE() ----> Links_Update_Date
+		)
+;
 
 
 INSERT INTO Spiritual.Scriptures_Topics (
@@ -183,47 +213,78 @@ INSERT INTO Spiritual.Scriptures_Topics (
 	, Topics_Update_Date
 )
 VALUES (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Salvation' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Exaltation' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'The Fall' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Atonement' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Christ' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Falling Short' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
 	)
 	, (
-		@Scriptures_Key ----> Scriptures_Key
+		10000 ----> Scriptures_Key
 		, 'Hope' ----> Topics_Text
 		, '2019-08-27' ----> Topics_Input_Date
 		, GETDATE() ----> Topics_Update_Date
-	);
+	)
+	, (
+		10001 ----> Scriptures_Key
+		, 'Depart from Wicked' ----> Topics_Text
+		, '2019-08-28' ----> Topics_Input_Date
+		, GETDATE() ----> Topics_Update_Date
+	)
+	, (
+		10001 ----> Scriptures_Key
+		, 'Association with Wicked' ----> Topics_Text
+		, '2019-08-28' ----> Topics_Input_Date
+		, GETDATE() ----> Topics_Update_Date
+	)
+	, (
+		10001 ----> Scriptures_Key
+		, 'Wicked' ----> Topics_Text
+		, '2019-08-28' ----> Topics_Input_Date
+		, GETDATE() ----> Topics_Update_Date
+	)
+	, (
+		10001 ----> Scriptures_Key
+		, 'Distruction' ----> Topics_Text
+		, '2019-08-28' ----> Topics_Input_Date
+		, GETDATE() ----> Topics_Update_Date
+	)
+	, (
+		10001 ----> Scriptures_Key
+		, 'Touch Nothing' ----> Topics_Text
+		, '2019-08-28' ----> Topics_Input_Date
+		, GETDATE() ----> Topics_Update_Date
+	)
+;
 	
 	
 INSERT INTO Spiritual.Scriptures_Ratings (

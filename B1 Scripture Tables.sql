@@ -16,70 +16,70 @@
 
 ----> Create Tables Scripts (Cities and Houses) <----
 
-----> Scriptures Table (Cities) <----
-DROP TABLE IF EXISTS Spiritual.Scriptures
+----> Scripture Table (Cities) <----
+DROP TABLE IF EXISTS Spiritual.Scripture
 
-CREATE TABLE Spiritual.Scriptures (
-	Scriptures_Table_Key INT IDENTITY (10000,1)
+CREATE TABLE Spiritual.Scripture (
+	Scripture_Table_Key INT IDENTITY (10000,1)
 	, Scripture_Key INT
-	, Scriptures_Reference NVARCHAR(500)
-	, Scriptures_Text NVARCHAR(4000)
-	, Ratings_Key INT
-	, Scriptures_Input_Date DATE
-	, Scriptures_Update_Date DATE
+	, Scripture_Reference NVARCHAR(500)
+	, Scripture_Text NVARCHAR(4000)
+	, Rating_Key INT
+	, Scripture_Input_Date DATE
+	, Scripture_Update_Date DATE
 );
 GO
 
 
-----> Scripture Notes Table <----
-DROP TABLE IF EXISTS Spiritual.Scriptures_Notes
+----> Scripture Note Table <----
+DROP TABLE IF EXISTS Spiritual.Scripture_Note
 
-CREATE TABLE Spiritual.Scriptures_Notes (
-	Notes_Key INT IDENTITY (10000,1)
-	, Scriptures_Key INT
-	, Notes_Text NVARCHAR(4000)
-	, Notes_Input_Date DATE
-	, Notes_Update_Date DATE
+CREATE TABLE Spiritual.Scripture_Note (
+	Note_Key INT IDENTITY (10000,1)
+	, Scripture_Key INT
+	, Note_Text NVARCHAR(4000)
+	, Note_Input_Date DATE
+	, Note_Update_Date DATE
 );
 GO
 
 
-----> Scripture Links Table <----
-DROP TABLE IF EXISTS Spiritual.Scriptures_Links
+----> Scripture Link Table <----
+DROP TABLE IF EXISTS Spiritual.Scripture_Link
 
-CREATE TABLE Spiritual.Scriptures_Links (
-	Links_Key INT IDENTITY(10000,1)
-	, Scriptures_Key INT
-	, Links_Reference NVARCHAR(500)
-	, Links_Text NVARCHAR(4000)
-	, Links_Input_Date DATE
-	, Links_Update_Date DATE
+CREATE TABLE Spiritual.Scripture_Link (
+	Link_Key INT IDENTITY(10000,1)
+	, Scripture_Key INT
+	, Link_Reference NVARCHAR(500)
+	, Link_Text NVARCHAR(4000)
+	, Link_Input_Date DATE
+	, Link_Update_Date DATE
 );
 GO
 
 
-----> Scripture Topics Table <----
-DROP TABLE IF EXISTS Spiritual.Scriptures_Topics
+----> Scripture Topic Table <----
+DROP TABLE IF EXISTS Spiritual.Scripture_Topic
 
-CREATE TABLE Spiritual.Scriptures_Topics (
-	Topics_Key INT IDENTITY (10000,1)
-	, Scriptures_Key INT
-	, Topics_Text NVARCHAR(4000)
-	, Topics_Input_Date DATE
-	, Topics_Update_Date DATE
+CREATE TABLE Spiritual.Scripture_Topic (
+	Topic_Key INT IDENTITY (10000,1)
+	, Scripture_Key INT
+	, Topic_Text NVARCHAR(4000)
+	, Topic_Input_Date DATE
+	, Topic_Update_Date DATE
 );
 GO
 
 
 ----> Scripture Rating Table <----
-DROP TABLE IF EXISTS Spiritual.Scriptures_Ratings
+DROP TABLE IF EXISTS Spiritual.Scripture_Rating
 
-CREATE TABLE Spiritual.Scriptures_Ratings (
-	Ratings_Key INT
-	, Ratings_Number INT
-	, Ratings_Number_Descr NVARCHAR(4000)
-	, Ratings_Input_Date DATE
-	, Ratings_Update_Date DATE
+CREATE TABLE Spiritual.Scripture_Rating (
+	Rating_Key INT
+	, Rating_Number INT
+	, Rating_Number_Descr NVARCHAR(4000)
+	, Rating_Input_Date DATE
+	, Rating_Update_Date DATE
 );
 GO
 
@@ -87,33 +87,33 @@ GO
 ----> Insert Data Scripts <----
 
 
-INSERT INTO Spiritual.Scriptures (
+INSERT INTO Spiritual.Scripture (
 	Scripture_Key
-	, Scriptures_Reference
-	, Scriptures_Text
-	, Ratings_Key
-	, Scriptures_Input_Date
-	, Scriptures_Update_Date
+	, Scripture_Reference
+	, Scripture_Text
+	, Rating_Key
+	, Scripture_Input_Date
+	, Scripture_Update_Date
 )
 VALUES ( 
 		10000 ----> Scripture_Key
-		, '2 Nephi 2:4' ----> Scriptures_Reference
-		, '…And the way is prepared from the fall of man, and salvation is free.' ----> Scriptures_Text
-		, 1 ----> Ratings_Key
-		, '2019-08-27' ----> Scriptures_Input_Date
-		, GETDATE() ----> Scriptures_Update_Date
+		, '2 Nephi 2:4' ----> Scripture_Reference
+		, '…And the way is prepared from the fall of man, and salvation is free.' ----> Scripture_Text
+		, 1 ----> Rating_Key
+		, '2019-08-27' ----> Scripture_Input_Date
+		, GETDATE() ----> Scripture_Update_Date
 		)
 		, ( 
 		10001 ----> Scripture_Key
-		, 'Numbers 16:26,32' ----> Scriptures_Reference
+		, 'Numbers 16:26,32' ----> Scripture_Reference
 		, '…Depart, I pray you, from the tents of these wicked men,
 			and touch nothing of theirs, lest ye be consumed in all their sins.
 			...the earth opened her mouth, and swallowed them up, 
 			and their houses, and all the men that appertained 
-			unto Korah, and all thier goods.' ----> Scriptures_Text
-		, 1 ----> Ratings_Key
-		, '2019-08-28' ----> Scriptures_Input_Date
-		, GETDATE() ----> Scriptures_Update_Date
+			unto Korah, and all thier goods.' ----> Scripture_Text
+		, 1 ----> Rating_Key
+		, '2019-08-28' ----> Scripture_Input_Date
+		, GETDATE() ----> Scripture_Update_Date
 		)
 ;
 GO
@@ -121,31 +121,31 @@ GO
 
 /*
 SELECT *
-	FROM Spiritual.Scriptures
+	FROM Spiritual.Scripture
 */
 
 ----> Set Scripture Key to be used in the insert statements <----
---DECLARE @Scriptures_Key INT;
---SET @Scriptures_Key = (SELECT MAX(Scriptures_Key) FROM Spiritual.Scriptures);
+--DECLARE @Scripture_Key INT;
+--SET @Scripture_Key = (SELECT MAX(Scripture_Key) FROM Spiritual.Scripture);
 
 
-INSERT INTO Spiritual.Scriptures_Notes (
-	Scriptures_Key
-	, Notes_Text
-	, Notes_Input_Date
-	, Notes_Update_Date
+INSERT INTO Spiritual.Scripture_Note (
+	Scripture_Key
+	, Note_Text
+	, Note_Input_Date
+	, Note_Update_Date
 )
 VALUES (
-		10000 ----> Scriptures_Key
+		10000 ----> Scripture_Key
 		, 'Salvation does not just mean the resurection, but the cleansing of our sins as well.
 			Christ has already paid the price to remove all the effects of the fall.
 			Salvation is free because there is nothing left for us to pay.
-			' ----> Notes_Text
-		, '2019-08-27' ----> Notes_Input_Date
-		, GETDATE() ----> Notes_Update_Date
+			' ----> Note_Text
+		, '2019-08-27' ----> Note_Input_Date
+		, GETDATE() ----> Note_Update_Date
 		)
 		, (
-		10001 ----> Scriptures_Key
+		10001 ----> Scripture_Key
 		, 'This scripture touched strongly my heart and spoke to what I should do.
 			I was to depart from the groups and individuals associated with being transgender.
 			and not be associated with any of them or I would face the same destruction that 
@@ -153,201 +153,201 @@ VALUES (
 			I will remove myself from all Facebook groups and remove all of the transgender 
 			friends that I have. I know this is a drastic move, but if I don''t do it
 			I face distruction.
-			' ----> Notes_Text
-		, '2019-08-28' ----> Notes_Input_Date
-		, GETDATE() ----> Notes_Update_Date
+			' ----> Note_Text
+		, '2019-08-28' ----> Note_Input_Date
+		, GETDATE() ----> Note_Update_Date
 		)
 ;
 
 /*
 SELECT *
-	FROM Spiritual.Scriptures_Notes
+	FROM Spiritual.Scripture_Note
 
 
 SELECT *
-	FROM Spiritual.Scriptures A
-		LEFT JOIN Spiritual.Scriptures_Notes B ON A.Scriptures_Key = B.Scriptures_Key
+	FROM Spiritual.Scripture A
+		LEFT JOIN Spiritual.Scripture_Note B ON A.Scripture_Key = B.Scripture_Key
 
 
-SELECT A.Scriptures_Reference
-	, A.Scriptures_Text
-	, STRING_AGG(B.Notes_Text, ' / ') AS Notes_Text
-	FROM Spiritual.Scriptures A
-		LEFT JOIN Spiritual.Scriptures_Notes B ON A.Scriptures_Key = B.Scriptures_Key
-	GROUP BY A.Scriptures_Reference
-		, A.Scriptures_Text
+SELECT A.Scripture_Reference
+	, A.Scripture_Text
+	, STRING_AGG(B.Note_Text, ' / ') AS Note_Text
+	FROM Spiritual.Scripture A
+		LEFT JOIN Spiritual.Scripture_Note B ON A.Scripture_Key = B.Scripture_Key
+	GROUP BY A.Scripture_Reference
+		, A.Scripture_Text
 */
 
 
-INSERT INTO Spiritual.Scriptures_Links (
-	Scriptures_Key
-	, Links_Reference
-	, Links_Text
-	, Links_Input_Date
-	, Links_Update_Date
+INSERT INTO Spiritual.Scripture_Link (
+	Scripture_Key
+	, Link_Reference
+	, Link_Text
+	, Link_Input_Date
+	, Link_Update_Date
 )
 VALUES (
-		10000 ----> Scriptures_Key
-		, '2 Nephi 25:27' ----> Links_Reference
+		10000 ----> Scripture_Key
+		, '2 Nephi 25:27' ----> Link_Reference
 		, 'Wherefore, we speak concerning the law that our children may know the deadness of the law;
 			and they, by knowing the deadness of the law, may look forward unto that life which is in Christ,
-			and know for what end the law was given…' ----> Links_Text
-		, '2019-08-27' ----> Links_Input_Date
-		, GETDATE() ----> Links_Update_Date
+			and know for what end the law was given…' ----> Link_Text
+		, '2019-08-27' ----> Link_Input_Date
+		, GETDATE() ----> Link_Update_Date
 		)
 		, (
-		10001 ----> Scriptures_Key
-		, '2 Nephi 5:5' ----> Links_Reference
+		10001 ----> Scripture_Key
+		, '2 Nephi 5:5' ----> Link_Reference
 		, '...the Lord did warn me, that I, Nephi, should depart from them and flee into the wilderness...
-			' ----> Links_Text
-		, '2019-08-28' ----> Links_Input_Date
-		, GETDATE() ----> Links_Update_Date
+			' ----> Link_Text
+		, '2019-08-28' ----> Link_Input_Date
+		, GETDATE() ----> Link_Update_Date
 		)
 ;
 
 
-INSERT INTO Spiritual.Scriptures_Topics (
-	Scriptures_Key
-	, Topics_Text
-	, Topics_Input_Date
-	, Topics_Update_Date
+INSERT INTO Spiritual.Scripture_Topic (
+	Scripture_Key
+	, Topic_Text
+	, Topic_Input_Date
+	, Topic_Update_Date
 )
 VALUES (
-		10000 ----> Scriptures_Key
-		, 'Salvation' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Salvation' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'Exaltation' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Exaltation' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'The Fall' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'The Fall' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'Atonement' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Atonement' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'Christ' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Christ' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'Falling Short' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Falling Short' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10000 ----> Scriptures_Key
-		, 'Hope' ----> Topics_Text
-		, '2019-08-27' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10000 ----> Scripture_Key
+		, 'Hope' ----> Topic_Text
+		, '2019-08-27' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10001 ----> Scriptures_Key
-		, 'Depart from Wicked' ----> Topics_Text
-		, '2019-08-28' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10001 ----> Scripture_Key
+		, 'Depart from Wicked' ----> Topic_Text
+		, '2019-08-28' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10001 ----> Scriptures_Key
-		, 'Association with Wicked' ----> Topics_Text
-		, '2019-08-28' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10001 ----> Scripture_Key
+		, 'Association with Wicked' ----> Topic_Text
+		, '2019-08-28' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10001 ----> Scriptures_Key
-		, 'Wicked' ----> Topics_Text
-		, '2019-08-28' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10001 ----> Scripture_Key
+		, 'Wicked' ----> Topic_Text
+		, '2019-08-28' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10001 ----> Scriptures_Key
-		, 'Distruction' ----> Topics_Text
-		, '2019-08-28' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10001 ----> Scripture_Key
+		, 'Distruction' ----> Topic_Text
+		, '2019-08-28' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 	, (
-		10001 ----> Scriptures_Key
-		, 'Touch Nothing' ----> Topics_Text
-		, '2019-08-28' ----> Topics_Input_Date
-		, GETDATE() ----> Topics_Update_Date
+		10001 ----> Scripture_Key
+		, 'Touch Nothing' ----> Topic_Text
+		, '2019-08-28' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
 	)
 ;
 	
 	
-INSERT INTO Spiritual.Scriptures_Ratings (
-	Ratings_Key
-	, Ratings_Number
-	, Ratings_Number_Descr
-	, Ratings_Input_Date
-	, Ratings_Update_Date
+INSERT INTO Spiritual.Scripture_Rating (
+	Rating_Key
+	, Rating_Number
+	, Rating_Number_Descr
+	, Rating_Input_Date
+	, Rating_Update_Date
 )
 VALUES (
-		1 ----> Ratings_Key
-		, 1 ----> Ratings_Number
-		, 'Personal Revelation - Life Changing' ----> Ratings_Number_Descr
-		, '2019-08-27' ----> Ratings_Input_Date
-		, GETDATE() ----> Ratings_Update_Date
+		1 ----> Rating_Key
+		, 1 ----> Rating_Number
+		, 'Personal Revelation - Life Changing' ----> Rating_Number_Descr
+		, '2019-08-27' ----> Rating_Input_Date
+		, GETDATE() ----> Rating_Update_Date
 	)
 	, (
-		2 ----> Ratings_Key
-		, 2 ----> Ratings_Number
-		, 'Personal Revelation - Gospel Insight' ----> Ratings_Number_Descr
-		, '2019-08-27' ----> Ratings_Input_Date
-		, GETDATE() ----> Ratings_Update_Date
+		2 ----> Rating_Key
+		, 2 ----> Rating_Number
+		, 'Personal Revelation - Gospel Insight' ----> Rating_Number_Descr
+		, '2019-08-27' ----> Rating_Input_Date
+		, GETDATE() ----> Rating_Update_Date
 	)
 	, (
-		3 ----> Ratings_Key
-		, 3 ----> Ratings_Number
-		, 'Favorite Scripture' ----> Ratings_Number_Descr
-		, '2019-08-27' ----> Ratings_Input_Date
-		, GETDATE() ----> Ratings_Update_Date
+		3 ----> Rating_Key
+		, 3 ----> Rating_Number
+		, 'Favorite Scripture' ----> Rating_Number_Descr
+		, '2019-08-27' ----> Rating_Input_Date
+		, GETDATE() ----> Rating_Update_Date
 	)
 	, (
-		4 ----> Ratings_Key
-		, 4 ----> Ratings_Number
-		, 'Doctrinal Scripture' ----> Ratings_Number_Descr
-		, '2019-08-27' ----> Ratings_Input_Date
-		, GETDATE() ----> Ratings_Update_Date
+		4 ----> Rating_Key
+		, 4 ----> Rating_Number
+		, 'Doctrinal Scripture' ----> Rating_Number_Descr
+		, '2019-08-27' ----> Rating_Input_Date
+		, GETDATE() ----> Rating_Update_Date
 	)
 	, (
-		5 ----> Ratings_Key
-		, 5 ----> Ratings_Number
-		, 'Scripture to Remember' ----> Ratings_Number_Descr
-		, '2019-08-27' ----> Ratings_Input_Date
-		, GETDATE() ----> Ratings_Update_Date
+		5 ----> Rating_Key
+		, 5 ----> Rating_Number
+		, 'Scripture to Remember' ----> Rating_Number_Descr
+		, '2019-08-27' ----> Rating_Input_Date
+		, GETDATE() ----> Rating_Update_Date
 	);
 	
 /*
-SELECT E.Ratings_Number
-	, A.Scriptures_Reference
-	, A.Scriptures_Text	
-	, STRING_AGG(B.Notes_Text,' / ') AS Notes_Text
-	, C.Links_Reference
-	, C.Links_Text
-	, STRING_AGG(D.Topics_Text,' / ') AS Links_Text
-	, E.Ratings_Number_Descr
-	FROM Moonstone.Spiritual.Scriptures A
-		LEFT JOIN Moonstone.Spiritual.Scriptures_Notes B ON A.Scriptures_Key = B.Scriptures_Key
-		LEFT JOIN Moonstone.Spiritual.Scriptures_Links C ON A.Scriptures_Key = C.Scriptures_Key
-		LEFT JOIN Moonstone.Spiritual.Scriptures_Topics D ON A.Scriptures_Key = D.Scriptures_Key
-		LEFT JOIN Moonstone.Spiritual.Scriptures_Ratings E ON A.Ratings_Key = E.Ratings_Key
-	GROUP BY A.Scriptures_Reference
-		, A.Scriptures_Text
-		, E.Ratings_Number
-		, E.Ratings_Number_Descr
-		, C.Links_Reference
-		, C.Links_Text
+SELECT E.Rating_Number
+	, A.Scripture_Reference
+	, A.Scripture_Text	
+	, STRING_AGG(B.Note_Text,' / ') AS Note_Text
+	, C.Link_Reference
+	, C.Link_Text
+	, STRING_AGG(D.Topic_Text,' / ') AS Link_Text
+	, E.Rating_Number_Descr
+	FROM Moonstone.Spiritual.Scripture A
+		LEFT JOIN Moonstone.Spiritual.Scripture_Note B ON A.Scripture_Key = B.Scripture_Key
+		LEFT JOIN Moonstone.Spiritual.Scripture_Link C ON A.Scripture_Key = C.Scripture_Key
+		LEFT JOIN Moonstone.Spiritual.Scripture_Topic D ON A.Scripture_Key = D.Scripture_Key
+		LEFT JOIN Moonstone.Spiritual.Scripture_Rating E ON A.Rating_Key = E.Rating_Key
+	GROUP BY A.Scripture_Reference
+		, A.Scripture_Text
+		, E.Rating_Number
+		, E.Rating_Number_Descr
+		, C.Link_Reference
+		, C.Link_Text
 */

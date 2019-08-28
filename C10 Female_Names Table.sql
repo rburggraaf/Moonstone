@@ -1,36 +1,39 @@
 /******************************************************
 
-    Name: Female_Names Table
+    Name: Female_Name Table
     Date: 8/28/2019
 
 *******************************************************/
 
 ----> Create Schema Script (Lands) <----
 
-----> Spiritual Schema <----
---CREATE SCHEMA Guests;
+----> Person Schema <----
+--DROP SCHEMA IF EXISTS Person;
+--GO
+
+--CREATE SCHEMA Person;
 --GO
 
 
 
 ----> Create Tables Scripts (Cities and Houses) <----
 
-----> Female Names Table <----
-DROP TABLE IF EXISTS Moonstone.Guests.Female_Names
+----> Female Name Table <----
+DROP TABLE IF EXISTS Moonstone.Person.Female_Name
 
-CREATE TABLE Moonstone.Guests.Female_Names (
-	Female_Names_Key INT IDENTITY (10000,1)
-	, Female_Names_Id INT
-	, Female_Names NVARCHAR(100)
+CREATE TABLE Moonstone.Person.Female_Name (
+	Female_Name_Key INT IDENTITY (10000,1)
+	, Female_Name_Id INT
+	, Female_Name NVARCHAR(100)
 	, Random_Number_Grouping INT
 );
 GO
 
 
 
-INSERT INTO Moonstone.Guests.Female_Names (
-	Female_Names_Id
-	, Female_Names
+INSERT INTO Moonstone.Person.Female_Name (
+	Female_Name_Id
+	, Female_Name
 	, Random_Number_Grouping
 )
 VALUES (1,'Aaliyah',65)
@@ -1037,7 +1040,7 @@ VALUES (1,'Aaliyah',65)
 
 /*
 SELECT *
-	FROM Moonstone.Guests.Female_Names
+	FROM Moonstone.Person.Female_Name
 	WHERE 1 = 1
 		AND Random_Number_Grouping IN (3,103)
 */

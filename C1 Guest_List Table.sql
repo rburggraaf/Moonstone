@@ -69,7 +69,7 @@ INSERT INTO Moonstone.Guests.Guest_List (
 	, Guest_Update_Date
 )
 VALUES (
-	1 ----> Guest_Id
+	10001 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Karina' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -99,7 +99,7 @@ VALUES (
 	, GETDATE() ----> Guest_Update_Date
 	)
 	, (
-	2 ----> Guest_Id
+	10002 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Brylee' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -130,7 +130,7 @@ VALUES (
 	, GETDATE() ----> Guest_Update_Date
 	)
 	, (
-	3 ----> Guest_Id
+	10003 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Kimberly' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -151,13 +151,13 @@ VALUES (
 	, NULL ----> Guest_Excitement_Yn
 	, NULL ----> Guest_Closeness_Yn
 	, NULL ---->  Guest_Repeat_Yn
-	, '2019-08-27' ----> Guest_Entry_Date
+	, '2019-08-28' ----> Guest_Entry_Date
 	, NULL ----> Guest_Leave_Date
 	, NULL ----> Guest_Leave_Reason
 	, GETDATE() ----> Guest_Update_Date
 	)
 	, (
-	4 ----> Guest_Id
+	10004 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Peyton' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -178,13 +178,13 @@ VALUES (
 	, NULL ----> Guest_Excitement_Yn
 	, NULL ----> Guest_Closeness_Yn
 	, NULL ---->  Guest_Repeat_Yn
-	, '2019-08-27' ----> Guest_Entry_Date
+	, '2019-08-28' ----> Guest_Entry_Date
 	, NULL ----> Guest_Leave_Date
 	, NULL ----> Guest_Leave_Reason
 	, GETDATE() ----> Guest_Update_Date
 	)
 	, (
-	5 ----> Guest_Id
+	10005 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Evelynn' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -205,13 +205,13 @@ VALUES (
 	, NULL ----> Guest_Excitement_Yn
 	, NULL ----> Guest_Closeness_Yn
 	, NULL ---->  Guest_Repeat_Yn
-	, '2019-08-27' ----> Guest_Entry_Date
+	, '2019-08-28' ----> Guest_Entry_Date
 	, NULL ----> Guest_Leave_Date
 	, NULL ----> Guest_Leave_Reason
 	, GETDATE() ----> Guest_Update_Date
 	)
 	, (
-	6 ----> Guest_Id
+	10006 ----> Guest_Id
 	, 0 ----> Guest_Sub_Number
 	, 'Olive' ----> Guest_Name
 	, 'Y' ----> Guest_From_I_Yn
@@ -232,12 +232,120 @@ VALUES (
 	, NULL ----> Guest_Excitement_Yn
 	, NULL ----> Guest_Closeness_Yn
 	, NULL ---->  Guest_Repeat_Yn
-	, '2019-08-27' ----> Guest_Entry_Date
+	, '2019-08-28' ----> Guest_Entry_Date
 	, NULL ----> Guest_Leave_Date
 	, NULL ----> Guest_Leave_Reason
 	, GETDATE() ----> Guest_Update_Date
 	)
-	
+	, (
+	10007 ----> Guest_Id
+	, 0 ----> Guest_Sub_Number
+	, 'Mylah' ----> Guest_Name
+	, 'Y' ----> Guest_From_I_Yn
+	, NULL ----> Guest_Age
+	, NULL ----> Guest_Colors
+	, NULL ----> Guest_Story
+	, NULL ----> Guest_Moonstone_Job
+	, NULL ----> Guest_Frequency 
+	, NULL ----> Guest_Hair_Color
+	, NULL ----> Guest_Hair_Descr
+	, NULL ----> Guest_Higher_Size
+	, NULL ----> Guest_Middle_Size
+	, NULL ----> Guest_Lower_Size
+	, NULL ----> Guest_Emotion
+	, NULL ---->  Guest_Phrase
+	, NULL ----> Guest_Welcome_Rank
+	, NULL ----> Guest_Coverage_Rank
+	, NULL ----> Guest_Excitement_Yn
+	, NULL ----> Guest_Closeness_Yn
+	, NULL ---->  Guest_Repeat_Yn
+	, '2019-08-28' ----> Guest_Entry_Date
+	, NULL ----> Guest_Leave_Date
+	, NULL ----> Guest_Leave_Reason
+	, GETDATE() ----> Guest_Update_Date
+	)
+	, (
+	10008 ----> Guest_Id
+	, 0 ----> Guest_Sub_Number
+	, 'Aliana' ----> Guest_Name
+	, 'Y' ----> Guest_From_I_Yn
+	, NULL ----> Guest_Age
+	, NULL ----> Guest_Colors
+	, NULL ----> Guest_Story
+	, NULL ----> Guest_Moonstone_Job
+	, NULL ----> Guest_Frequency 
+	, NULL ----> Guest_Hair_Color
+	, NULL ----> Guest_Hair_Descr
+	, NULL ----> Guest_Higher_Size
+	, NULL ----> Guest_Middle_Size
+	, NULL ----> Guest_Lower_Size
+	, NULL ----> Guest_Emotion
+	, NULL ---->  Guest_Phrase
+	, NULL ----> Guest_Welcome_Rank
+	, NULL ----> Guest_Coverage_Rank
+	, NULL ----> Guest_Excitement_Yn
+	, NULL ----> Guest_Closeness_Yn
+	, NULL ---->  Guest_Repeat_Yn
+	, '2019-08-28' ----> Guest_Entry_Date
+	, NULL ----> Guest_Leave_Date
+	, NULL ----> Guest_Leave_Reason
+	, GETDATE() ----> Guest_Update_Date
+	)
+	, (
+	10009 ----> Guest_Id
+	, 0 ----> Guest_Sub_Number
+	, 'Avalyn' ----> Guest_Name
+	, 'Y' ----> Guest_From_I_Yn
+	, NULL ----> Guest_Age
+	, NULL ----> Guest_Colors
+	, NULL ----> Guest_Story
+	, NULL ----> Guest_Moonstone_Job
+	, NULL ----> Guest_Frequency 
+	, NULL ----> Guest_Hair_Color
+	, NULL ----> Guest_Hair_Descr
+	, NULL ----> Guest_Higher_Size
+	, NULL ----> Guest_Middle_Size
+	, NULL ----> Guest_Lower_Size
+	, NULL ----> Guest_Emotion
+	, NULL ---->  Guest_Phrase
+	, NULL ----> Guest_Welcome_Rank
+	, NULL ----> Guest_Coverage_Rank
+	, NULL ----> Guest_Excitement_Yn
+	, NULL ----> Guest_Closeness_Yn
+	, NULL ---->  Guest_Repeat_Yn
+	, '2019-08-28' ----> Guest_Entry_Date
+	, NULL ----> Guest_Leave_Date
+	, NULL ----> Guest_Leave_Reason
+	, GETDATE() ----> Guest_Update_Date
+	)
+	, (
+	10010 ----> Guest_Id
+	, 0 ----> Guest_Sub_Number
+	, 'Jacqueline' ----> Guest_Name
+	, 'Y' ----> Guest_From_I_Yn
+	, NULL ----> Guest_Age
+	, NULL ----> Guest_Colors
+	, NULL ----> Guest_Story
+	, NULL ----> Guest_Moonstone_Job
+	, NULL ----> Guest_Frequency 
+	, NULL ----> Guest_Hair_Color
+	, NULL ----> Guest_Hair_Descr
+	, NULL ----> Guest_Higher_Size
+	, NULL ----> Guest_Middle_Size
+	, NULL ----> Guest_Lower_Size
+	, NULL ----> Guest_Emotion
+	, NULL ---->  Guest_Phrase
+	, NULL ----> Guest_Welcome_Rank
+	, NULL ----> Guest_Coverage_Rank
+	, NULL ----> Guest_Excitement_Yn
+	, NULL ----> Guest_Closeness_Yn
+	, NULL ---->  Guest_Repeat_Yn
+	, '2019-08-28' ----> Guest_Entry_Date
+	, NULL ----> Guest_Leave_Date
+	, NULL ----> Guest_Leave_Reason
+	, GETDATE() ----> Guest_Update_Date
+	)
+;
 
 /*
 SELECT *

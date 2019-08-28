@@ -8,8 +8,8 @@
 ----> Create Schema Script (Lands) <----
 
 ----> Spiritual Schema <----
-CREATE SCHEMA Guests;
-GO
+--CREATE SCHEMA Guests;
+--GO
 
 
 
@@ -1039,7 +1039,7 @@ VALUES (1,'Aaliyah',65)
 SELECT *
 	FROM Moonstone.Guests.Female_Names
 	WHERE 1 = 1
-		AND Random_Number_Grouping = 1
+		AND Random_Number_Grouping IN (3,103)
 */
 
 

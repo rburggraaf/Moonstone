@@ -69,7 +69,7 @@ VALUES (
             A sexually precocious girl barely in her teens.
             ' ----> Feminine_Word_Definition
         , 'Attractive, Teen, Sexually Mature, Girl, Beauty'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
@@ -94,7 +94,7 @@ VALUES (
             Adjuctive: Hoydenish
             ' ----> Feminine_Word_Definition
         , 'Girl, Boyish, Boisterous, Woman, Tomboy, Characteristic'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
@@ -165,7 +165,7 @@ VALUES (
         , '(Obstetrics) A woman who has never given birth to a child.
             ' ----> Feminine_Word_Definition
         , 'Birth, No Child, Pregnancy, Woman'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
@@ -259,7 +259,7 @@ VALUES (
         , 'A woman with whom you are in love or have an intimate relationship.
             ' ----> Feminine_Word_Definition
         , 'Love, Relationship, Intimate, Sexuality, Woman, Characteristic'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
@@ -279,7 +279,7 @@ VALUES (
         , 'Nubile' ----> Feminine_Word
         , 'Girls or Women who are eligible to marry.' ----> Feminine_Word_Definition
         , 'Marry, Eligible, Characteristic, Girl, Woman'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
@@ -291,7 +291,7 @@ VALUES (
             (Of a woman''s body) Having a large bosom and pleasing curves.
             ' ----> Feminine_Word_Definition
         , 'Plump, Vigorous, Curves, Characteristic, Woman, Girl'----> Feminine_Word_Key_Words
-        , 'N' ----> Feminine_Word_Used_Yn
+        , 'Y' ----> Feminine_Word_Used_Yn
         , 1 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date

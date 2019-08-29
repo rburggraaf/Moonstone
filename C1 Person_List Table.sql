@@ -17,6 +17,7 @@ CREATE TABLE Moonstone.Person.Person_List (
 	, Person_From_I_Yn NVARCHAR(1)
 	, Person_Age INT
 	, Person_Colors NVARCHAR(200)
+	, Person_Characteristics NVARCHAR(4000)
 	, Person_Story NVARCHAR(4000)
 	, Person_Moonstone_Job NVARCHAR(4000)
 	, Person_Frequency NVARCHAR(500)
@@ -48,6 +49,7 @@ INSERT INTO Moonstone.Person.Person_List (
 	, Person_From_I_Yn
 	, Person_Age
 	, Person_Colors
+	, Person_Characteristics
 	, Person_Story
 	, Person_Moonstone_Job
 	, Person_Frequency 
@@ -73,12 +75,17 @@ VALUES (
 	, 0 ----> Person_Sub_Number
 	, 'Karina' ----> Person_Name
 	, 'Y' ----> Person_From_I_Yn
-	, 16 ----> Person_Age
+	, 18 ----> Person_Age
 	, 'Red, Pink, White' ----> Person_Colors
+	, 'Nymphet (An attractive and sexually mature young girl)
+		Nubile (Girls or Women who are eligible to marry)
+		Buxom (Healthy plump and Vigorous)
+		' ----> Person_Characteristics
 	, 'Karina lost her parents and is wanting to find real love and kindness. 
 		She enjoys playing on several girls sports teams, like swimming, soccor, and tennis.
 		She doesn''t have many good friends, but she loves to be around Hanna 
-		and helping her in whatever way possible.' ----> Person_Story
+		and helping her in whatever way possible. Due in part because she is inamorata with her.
+		' ----> Person_Story
 	, 'Swimming companion'----> Person_Moonstone_Job
 	, 'A couple times a week'----> Person_Frequency 
 	, 'Red'----> Person_Hair_Color
@@ -103,12 +110,15 @@ VALUES (
 	, 0 ----> Person_Sub_Number
 	, 'Brylee' ----> Person_Name
 	, 'Y' ----> Person_From_I_Yn
-	, 18 ----> Person_Age
+	, 20 ----> Person_Age
 	, 'Brown, White' ----> Person_Colors
+	, 'Hoyden (Tomboy)
+		Nullipara (A woman who has never given birth to a child)
+		' ----> Person_Characteristics
 	, 'She has been doing hair styling since she was about 14 and she says that 
 		hair styling is one of her favorite things to do.
-		If Hanna was more available and wanting, she would love to 
-		spend more time with her.
+		She does hang out with Hanna from time to time, though she wishes
+		that she could be with her more often. 
 		' ----> Person_Story
 	, 'Hair Stylist' ----> Person_Moonstone_Job
 	, 'Twice a month' ----> Person_Frequency 
@@ -117,7 +127,7 @@ VALUES (
 	, 'Medium' ----> Person_Higher_Size
 	, 'Small' ----> Person_Middle_Size
 	, 'Small' ----> Person_Lower_Size
-	, 'Mischievous and fun' ----> Person_Emotion
+	, 'Mischievous and fun and Hoyden' ----> Person_Emotion
 	, 'You''re beautifuly unique' ---->  Person_Phrase
 	, 6 ----> Person_Welcome_Rank
 	, 7 ----> Person_Coverage_Rank
@@ -136,6 +146,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -163,6 +174,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -190,6 +202,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -217,6 +230,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -244,6 +258,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -271,6 +286,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -298,6 +314,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 
@@ -325,6 +342,7 @@ VALUES (
 	, 'Y' ----> Person_From_I_Yn
 	, NULL ----> Person_Age
 	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
 	, NULL ----> Person_Story
 	, NULL ----> Person_Moonstone_Job
 	, NULL ----> Person_Frequency 

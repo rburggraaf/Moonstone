@@ -19,9 +19,9 @@
 ----> Create Tables Scripts (Cities and Houses) <----
 
 ----> Feminine Word Table <----
-DROP TABLE IF EXISTS Moonstone.Word.Feminine_Word
+DROP TABLE IF EXISTS Moonstone.Talent.Feminine_Word
 
-CREATE TABLE Moonstone.Word.Feminine_Word (
+CREATE TABLE Moonstone.Talent.Feminine_Word (
 	Feminine_Word_Key INT IDENTITY (10000,1)
 	, Feminine_Word_Id INT
 	, Feminine_Word NVARCHAR(100)
@@ -38,7 +38,7 @@ GO
 ----> Insert Data Scripts <----
 
 
-INSERT INTO Moonstone.Word.Feminine_Word (
+INSERT INTO Moonstone.Talent.Feminine_Word (
 	Feminine_Word_Id
 	, Feminine_Word
     , Feminine_Word_Definition

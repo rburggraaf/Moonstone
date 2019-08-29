@@ -392,7 +392,7 @@ VALUES (
 /*
 
 SELECT *
-	FROM Moonstone.Word.Feminine_Word
+	FROM Moonstone.Talent.Feminine_Word
 	WHERE 1 = 1
 		AND Feminine_Word_Key_Words LIKE '%Girl%'
 

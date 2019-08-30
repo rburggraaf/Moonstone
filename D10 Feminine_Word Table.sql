@@ -374,6 +374,77 @@ VALUES (
         )
         , ( 
         10029 ----> Feminine_Word_Id
+        , 'Adventurous' ----> Feminine_Word
+        , 'Willing to undertake new and daring enterprises.' ----> Feminine_Word_Definition
+        , 'Characteristic, Risky, Change'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 4 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10030 ----> Feminine_Word_Id
+        , 'Amiable' ----> Feminine_Word
+        , 'Diffusing warmth and friendliness.' ----> Feminine_Word_Definition
+        , 'Characteristic, Friendship, Kindness, Love'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 3 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10031 ----> Feminine_Word_Id
+        , 'Exuberant' ----> Feminine_Word
+        , 'Unrestrained, especially with regard to feelings.
+            An exuberant person is full of joy and has a lot of energy to show it.' ----> Feminine_Word_Definition
+        , 'Characteristic, Joy, Happiness, Energy, Unrestrained'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 3 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10032 ----> Feminine_Word_Id
+        , 'Gregarious' ----> Feminine_Word
+        , 'Tempermentally seeking and enjoying the company of others.
+            Gregarious people are fun to be around and they like being around other
+            people. They are the ''life of the party''' ----> Feminine_Word_Definition
+        , 'People, Fun, Life, Happiness, Social, Characteristic'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 2 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10033 ----> Feminine_Word_Id
+        , 'Philosophical' ----> Feminine_Word
+        , 'Meeting trouble with level-headed detachment.
+            People who are philosophical often wonder, ''In the grand scheme of things,
+            is it worth it?'' Philosophical people tend to look at the larger picture
+            of life and stay above trivial situations.
+            ' ----> Feminine_Word_Definition
+        , 'Level-headed, Characteristic, Calm, Pragmatic'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10034 ----> Feminine_Word_Id
+        , 'Practical' ----> Feminine_Word
+        , 'Guided by experience and observaiton rather than theory.
+            People who are practical look at things in a reasonable, level-headed way.
+            They are likely to take a coat with them in case it is cold - they know
+            they can take it off it is too hot.
+            ' ----> Feminine_Word_Definition
+        , 'Experience, Observation, Reasonable, Characterisitc'----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-30' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10035 ----> Feminine_Word_Id
         , '' ----> Feminine_Word
         , '' ----> Feminine_Word_Definition
         , ''----> Feminine_Word_Key_Words
@@ -383,7 +454,47 @@ VALUES (
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
-        10030 ----> Feminine_Word_Id
+        10036 ----> Feminine_Word_Id
+        , '' ----> Feminine_Word
+        , '' ----> Feminine_Word_Definition
+        , ''----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-29' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10037 ----> Feminine_Word_Id
+        , '' ----> Feminine_Word
+        , '' ----> Feminine_Word_Definition
+        , ''----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-29' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10038 ----> Feminine_Word_Id
+        , '' ----> Feminine_Word
+        , '' ----> Feminine_Word_Definition
+        , ''----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-29' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10039 ----> Feminine_Word_Id
+        , '' ----> Feminine_Word
+        , '' ----> Feminine_Word_Definition
+        , ''----> Feminine_Word_Key_Words
+        , 'N' ----> Feminine_Word_Used_Yn
+        , 1 ----> Feminine_Word_Rating
+        , '2019-08-29' ----> Feminine_Word_Input_Date
+        , GETDATE() ----> Feminine_Word_Update_Date
+        )
+        , ( 
+        10040 ----> Feminine_Word_Id
         , '' ----> Feminine_Word
         , '' ----> Feminine_Word_Definition
         , ''----> Feminine_Word_Key_Words

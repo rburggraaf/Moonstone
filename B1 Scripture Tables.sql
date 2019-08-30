@@ -133,6 +133,16 @@ VALUES (
 		, '2019-08-29' ----> Scripture_Input_Date
 		, GETDATE() ----> Scripture_Update_Date
 		)
+		, ( 
+		10004 ----> Scripture_Id
+		, '2 Kings 6:10' ----> Scripture_Reference
+		, 'And the king of Israel sent to the place which the man of God
+			told him and warned him of, and saved himself there...
+			' ----> Scripture_Text
+		, 10005 ----> Scripture_Rating_Id
+		, '2019-08-30' ----> Scripture_Input_Date
+		, GETDATE() ----> Scripture_Update_Date
+		)
 ;
 GO
 		
@@ -200,6 +210,21 @@ VALUES (
 			many good works, they will all be for not if we do iniquity. 
 			' ----> Note_Text
 		, '2019-08-29' ----> Note_Input_Date
+		, GETDATE() ----> Note_Update_Date
+		)
+		, (
+		10005 ----> Scripture_Note_Id
+		, 10004 ----> Scripture_Id
+		, 'Again as I started reading in the Book of Mormon I was inspired to read
+			connecting scriptures in the Old Testment. Earlier this week I was
+			inspired to discontinue any connection with the trans community and 
+			how important to fallow the teachings of the church leaders.
+			Well the things that I read today in 2 Kings 6,7 added emphasis to 
+			the importance and result for those that follow the prophet and those
+			that speak against the prophet. Those who speak against the prophet 
+			walk a path to destruction. 
+			' ----> Note_Text
+		, '2019-08-30' ----> Note_Input_Date
 		, GETDATE() ----> Note_Update_Date
 		)
 ;
@@ -270,6 +295,17 @@ VALUES (
 			And then will I profess unto them, I never knew you: depart from me, ye that work iniquity.
 			' ----> Link_Text
 		, '2019-08-29' ----> Link_Input_Date
+		, GETDATE() ----> Link_Update_Date
+		)
+		, (
+		10005 ----> Scripture_Link_Id
+		, 10004 ----> Scripture_Id
+		, '2 Nephi 5:6' ----> Link_Reference
+		, '...I, Nephi, did take... all those who would go with me. And all those who would go
+			with me were those who believed in the warnings and the revelations of God;
+			wherefore, they did hearken unto my words.
+			' ----> Link_Text
+		, '2019-08-30' ----> Link_Input_Date
 		, GETDATE() ----> Link_Update_Date
 		)
 ;
@@ -385,6 +421,41 @@ VALUES (
 		, 10003 ----> Scripture_Id
 		, 'Association with Wicked' ----> Topic_Text
 		, '2019-08-29' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10016 ----> Scripture_Topic_Id
+		, 10004 ----> Scripture_Id
+		, 'Depart' ----> Topic_Text
+		, '2019-08-30' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10017 ----> Scripture_Topic_Id
+		, 10004 ----> Scripture_Id
+		, 'Distruction' ----> Topic_Text
+		, '2019-08-30' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10018 ----> Scripture_Topic_Id
+		, 10004 ----> Scripture_Id
+		, 'Follow the Prophet' ----> Topic_Text
+		, '2019-08-30' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10019 ----> Scripture_Topic_Id
+		, 10004 ----> Scripture_Id
+		, 'Prophet' ----> Topic_Text
+		, '2019-08-30' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10020 ----> Scripture_Topic_Id
+		, 10004 ----> Scripture_Id
+		, 'Saved' ----> Topic_Text
+		, '2019-08-30' ----> Topic_Input_Date
 		, GETDATE() ----> Topic_Update_Date
 	)
 ;

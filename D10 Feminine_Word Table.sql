@@ -308,61 +308,67 @@ VALUES (
         )
         , ( 
         10023 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Erstwhile' ----> Feminine_Word
+        , 'Belonging to some prior time.
+            At a privious time.' ----> Feminine_Word_Definition
+        , 'Time, Characteristic'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 5 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
         10024 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Charismatic' ----> Feminine_Word
+        , 'Possessing an extraordinary abolity to attract.' ----> Feminine_Word_Definition
+        , 'Characteristic, Beauty'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 5 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
         10025 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Serene' ----> Feminine_Word
+        , 'Completely clear and fine.
+            Not agitated; without losing self-possession' ----> Feminine_Word_Definition
+        , 'Characteristic, Clear, Beauty'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 5 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
         10026 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Exquisite' ----> Feminine_Word
+        , 'Of extreme beauty
+            Delicately beautiful
+            Lavishly elegant and refined' ----> Feminine_Word_Definition
+        , 'Characteristic, Delicate, Beauty'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 5 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
         10027 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Venal' ----> Feminine_Word
+        , 'Capable of being corrupted' ----> Feminine_Word_Definition
+        , 'Evil, Characteristic, Corrupt'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 4 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
         , ( 
         10028 ----> Feminine_Word_Id
-        , '' ----> Feminine_Word
-        , '' ----> Feminine_Word_Definition
-        , ''----> Feminine_Word_Key_Words
+        , 'Austere' ----> Feminine_Word
+        , 'Practicing great self-denial
+            Of a stern or strict bearing or demeanor; forbidding in aspect
+            Severely simple' ----> Feminine_Word_Definition
+        , 'Characteristic, Simple, Denial'----> Feminine_Word_Key_Words
         , 'N' ----> Feminine_Word_Used_Yn
-        , 1 ----> Feminine_Word_Rating
+        , 5 ----> Feminine_Word_Rating
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
@@ -386,6 +392,18 @@ VALUES (
         , '2019-08-29' ----> Feminine_Word_Input_Date
         , GETDATE() ----> Feminine_Word_Update_Date
         )
+;
+
+
+/*
+
+SELECT *
+	FROM Moonstone.Talent.Feminine_Word
+	WHERE 1 = 1
+		AND Feminine_Word_Key_Words LIKE '%Girl%'
+
+*/
+
 ;
 
 

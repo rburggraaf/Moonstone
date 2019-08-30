@@ -144,25 +144,32 @@ VALUES (
 	, 0 ----> Person_Sub_Number
 	, 'Kimberly' ----> Person_Name
 	, 'Y' ----> Person_From_I_Yn
-	, NULL ----> Person_Age
-	, NULL ----> Person_Colors
-	, NULL ----> Person_Characteristics
-	, NULL ----> Person_Story
-	, NULL ----> Person_Moonstone_Job
-	, NULL ----> Person_Frequency 
-	, NULL ----> Person_Hair_Color
-	, NULL ----> Person_Hair_Descr
-	, NULL ----> Person_Higher_Size
-	, NULL ----> Person_Middle_Size
-	, NULL ----> Person_Lower_Size
-	, NULL ----> Person_Emotion
-	, NULL ---->  Person_Phrase
-	, NULL ----> Person_Welcome_Rank
-	, NULL ----> Person_Coverage_Rank
-	, NULL ----> Person_Excitement_Yn
-	, NULL ----> Person_Closeness_Yn
-	, NULL ---->  Person_Repeat_Yn
-	, '2019-08-28' ----> Person_Entry_Date
+	, 20 ----> Person_Age
+	, 'Brown, White, Blue' ----> Person_Colors
+	, 'Nubile, Amiable, Practical, Philander, Reserved' ----> Person_Characteristics
+	, 'Kimberly and Hanna started working at Distaff on the same day
+		a few years ago. They have always stayed close even though they
+		at times were on seperate projects. Currently they are both
+		on the same project. They like to do things after work on 
+		occasion and just have fun, more as a couple than in a group.
+		She doesn''t have many close friends, but considers Hanna as 
+		one of her close friends.
+		' ----> Person_Story
+	, 'Project Manager and coworker with Hanna at Distaff Technologies' ----> Person_Moonstone_Job
+	, 'Every other day or so' ----> Person_Frequency 
+	, 'Brown' ----> Person_Hair_Color
+	, 'Shorter and straight' ----> Person_Hair_Descr
+	, 'Medium' ----> Person_Higher_Size
+	, 'Medium' ----> Person_Middle_Size
+	, 'Medium' ----> Person_Lower_Size
+	, 'Kind and a little bit an introvert, but flirtacious with those close to her.' ----> Person_Emotion
+	, 'I''d love to.' ---->  Person_Phrase
+	, 3 ----> Person_Welcome_Rank
+	, 8 ----> Person_Coverage_Rank
+	, 'N' ----> Person_Excitement_Yn
+	, 'N' ----> Person_Closeness_Yn
+	, 'N' ---->  Person_Repeat_Yn
+	, '2019-08-30' ----> Person_Entry_Date
 	, NULL ----> Person_Leave_Date
 	, NULL ----> Person_Leave_Reason
 	, GETDATE() ----> Person_Update_Date

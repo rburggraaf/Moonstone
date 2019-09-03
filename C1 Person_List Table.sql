@@ -179,24 +179,27 @@ VALUES (
 	, 0 ----> Person_Sub_Number
 	, 'Peyton' ----> Person_Name
 	, 'Y' ----> Person_From_I_Yn
-	, NULL ----> Person_Age
-	, NULL ----> Person_Colors
-	, NULL ----> Person_Characteristics
-	, NULL ----> Person_Story
-	, NULL ----> Person_Moonstone_Job
-	, NULL ----> Person_Frequency 
-	, NULL ----> Person_Hair_Color
-	, NULL ----> Person_Hair_Descr
-	, NULL ----> Person_Higher_Size
-	, NULL ----> Person_Middle_Size
-	, NULL ----> Person_Lower_Size
-	, NULL ----> Person_Emotion
-	, NULL ---->  Person_Phrase
-	, NULL ----> Person_Welcome_Rank
-	, NULL ----> Person_Coverage_Rank
-	, NULL ----> Person_Excitement_Yn
-	, NULL ----> Person_Closeness_Yn
-	, NULL ---->  Person_Repeat_Yn
+	, 19 ----> Person_Age
+	, 'Dark Blue, Brown' ----> Person_Colors
+	, 'Kind, Friendly, Hard Worker, Nubile, Nullipara' ----> Person_Characteristics
+	, 'She comes from a well to do family. Though she had the opportunity to have a higher 
+		education, she does not enjoy schooling, so she left after a minimal amount.
+		She can from time to time put up walls to hide behind.
+		' ----> Person_Story
+	, 'Executive Adim at Distaff' ----> Person_Moonstone_Job
+	, '2 to 3 times a week' ----> Person_Frequency 
+	, 'Dark Brown' ----> Person_Hair_Color
+	, 'Long to lower back and striaght, but often in an updo' ----> Person_Hair_Descr
+	, 'Small' ----> Person_Higher_Size
+	, 'Small' ----> Person_Middle_Size
+	, 'Small' ----> Person_Lower_Size
+	, 'Cheerful, Caring, Sensitive' ----> Person_Emotion
+	, 'Forgive and Forget.' ---->  Person_Phrase
+	, 7 ----> Person_Welcome_Rank
+	, 6 ----> Person_Coverage_Rank
+	, 'N' ----> Person_Excitement_Yn
+	, 'N' ----> Person_Closeness_Yn
+	, 'N' ---->  Person_Repeat_Yn
 	, '2019-08-28' ----> Person_Entry_Date
 	, NULL ----> Person_Leave_Date
 	, NULL ----> Person_Leave_Reason
@@ -376,23 +379,28 @@ VALUES (
 	, 'Hanna' ----> Person_Name
 	, 'Y' ----> Person_From_I_Yn
 	, 20 ----> Person_Age
-	, NULL ----> Person_Colors
-	, NULL ----> Person_Characteristics
-	, NULL ----> Person_Story
-	, NULL ----> Person_Moonstone_Job
-	, NULL ----> Person_Frequency 
-	, NULL ----> Person_Hair_Color
-	, NULL ----> Person_Hair_Descr
-	, NULL ----> Person_Higher_Size
-	, NULL ----> Person_Middle_Size
-	, NULL ----> Person_Lower_Size
-	, NULL ----> Person_Emotion
-	, NULL ---->  Person_Phrase
-	, NULL ----> Person_Welcome_Rank
-	, NULL ----> Person_Coverage_Rank
-	, NULL ----> Person_Excitement_Yn
-	, NULL ----> Person_Closeness_Yn
-	, NULL ---->  Person_Repeat_Yn
+	, 'Blue, White, Gray, Light Brown' ----> Person_Colors
+	, 'Practical, Pulchritudinous, Nubile, Nullipara' ----> Person_Characteristics
+	, 'Grew up in a poor family and has had to work really hard to get
+		where she is now. Much of her technical skills were self learned.
+		She is happy with her simple life, though she does suffer from 
+		bouts with depression. Her family lives far away and there is very
+		little contact with them, so she really values her friendships.
+		' ----> Person_Story
+	, 'Data Engineer at Distaff Technologies' ----> Person_Moonstone_Job
+	, 'Always' ----> Person_Frequency 
+	, 'Light Brown' ----> Person_Hair_Color
+	, 'Long, Mid-Back, Wavy or Currly' ----> Person_Hair_Descr
+	, 'Small' ----> Person_Higher_Size
+	, 'Small' ----> Person_Middle_Size
+	, 'Small' ----> Person_Lower_Size
+	, 'Serene, Austere, Amiable, ' ----> Person_Emotion
+	, 'It will all work out in the end.' ---->  Person_Phrase
+	, 1 ----> Person_Welcome_Rank
+	, 8 ----> Person_Coverage_Rank
+	, 'N' ----> Person_Excitement_Yn
+	, 'N' ----> Person_Closeness_Yn
+	, 'N' ---->  Person_Repeat_Yn
 	, '2019-09-03' ----> Person_Entry_Date
 	, NULL ----> Person_Leave_Date
 	, NULL ----> Person_Leave_Reason

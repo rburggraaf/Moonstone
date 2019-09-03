@@ -413,15 +413,19 @@ SELECT A.Talent_Name
 
 
 SELECT Talent_Name AS Talent
+    , Talent_Project_Name AS Project
 	, RIGHT('0' + CONVERT(NVARCHAR,Talent_Session_Time_Duration_Min / 60),2) + ':' + RIGHT('0' + CONVERT(NVARCHAR,Talent_Session_Time_Duration_Min % 60),2) AS Summed_Time
 	FROM
 		(SELECT A.Talent_Name
+            , C.Talent_Project_Name
 			, SUM(B.Talent_Session_Time_Duration_Min) AS Talent_Session_Time_Duration_Min
 			FROM Talent.Talent_List A 
 				INNER JOIN Talent.Talent_Session B ON A.Talent_List_Key = B.Talent_List_Key
+                LEFT JOIN Talent.Talent_Project C ON B.Talent_Project_Key = C.Talent_Project_Key
 			GROUP BY A.Talent_Name
+                , C.Talent_Project_Name
 		) A
-	ORDER BY 2 DESC
+	ORDER BY 3 DESC
 
 */
 

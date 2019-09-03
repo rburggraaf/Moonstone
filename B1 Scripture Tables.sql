@@ -575,10 +575,10 @@ SELECT F.Rating_Number
 	, A.Scripture_Input_Date
 	, A.Scripture_Reference
 	, A.Scripture_Text
-	, B.Note_Text
-	, C.Link_Reference
-	, D.Link_Text
-	, E.Topic_Text
+	, COALESCE(B.Note_Text,'') AS Note_Text
+	, COALESCE(C.Link_Reference,'') AS Link_Reference
+	, COALESCE(D.Link_Text,'') AS Link_Text
+	, COALESCE(E.Topic_Text,'') AS Topic_Text
 	FROM Moonstone.Spiritual.Scripture A
 		LEFT JOIN
 			(SELECT A.Scripture_Id	

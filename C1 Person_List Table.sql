@@ -370,6 +370,34 @@ VALUES (
 	, NULL ----> Person_Leave_Reason
 	, GETDATE() ----> Person_Update_Date
 	)
+	, (
+	10011 ----> Person_Id
+	, 0 ----> Person_Sub_Number
+	, 'Hanna' ----> Person_Name
+	, 'Y' ----> Person_From_I_Yn
+	, 20 ----> Person_Age
+	, NULL ----> Person_Colors
+	, NULL ----> Person_Characteristics
+	, NULL ----> Person_Story
+	, NULL ----> Person_Moonstone_Job
+	, NULL ----> Person_Frequency 
+	, NULL ----> Person_Hair_Color
+	, NULL ----> Person_Hair_Descr
+	, NULL ----> Person_Higher_Size
+	, NULL ----> Person_Middle_Size
+	, NULL ----> Person_Lower_Size
+	, NULL ----> Person_Emotion
+	, NULL ---->  Person_Phrase
+	, NULL ----> Person_Welcome_Rank
+	, NULL ----> Person_Coverage_Rank
+	, NULL ----> Person_Excitement_Yn
+	, NULL ----> Person_Closeness_Yn
+	, NULL ---->  Person_Repeat_Yn
+	, '2019-09-03' ----> Person_Entry_Date
+	, NULL ----> Person_Leave_Date
+	, NULL ----> Person_Leave_Reason
+	, GETDATE() ----> Person_Update_Date
+	)
 ;
 
 /*

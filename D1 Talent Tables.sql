@@ -342,6 +342,12 @@ VALUES (
 ;
 GO
 
+/*
+
+SELECT *
+    FROM Talent.Talent_Session_Note
+
+*/
 
 
 INSERT INTO Talent.Talent_Project (
@@ -372,8 +378,13 @@ VALUES (
 	, '2019-09-03' ----> Talent_Project_Input_Date
 	, GETDATE() ----> Talent_Project_Update_Date
     )
-
-
+    , (
+    10004 ----> Talent_Project_Key
+    , 'Average Grade' ----> Talent_Project_Name
+	, 'HR work assignment'----> Talent_Project_Descr
+	, '2019-09-03' ----> Talent_Project_Input_Date
+	, GETDATE() ----> Talent_Project_Update_Date
+    )
 ;
 GO
 
@@ -382,8 +393,11 @@ GO
 /*
 
 SELECT *
-    FROM Talent.Talent_Session_Note
+    FROM Talent.Talent_Project
 
+*/
+
+/*
 
 SELECT A.Talent_Name
 	, B.Talent_Session_Begin_DateTime AS Date_Time

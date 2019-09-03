@@ -143,6 +143,15 @@ VALUES (
 		, '2019-08-30' ----> Scripture_Input_Date
 		, GETDATE() ----> Scripture_Update_Date
 		)
+		, (
+		10005 ----> Scripture_Id
+		, '2 Nephi 5:7' ----> Scripture_Reference
+		, '...Whatsoever things were possible for us,...
+			' ----> Scripture_Text
+		, 10005 ----> Scripture_Rating_Id
+		, '2019-09-03' ----> Scripture_Input_Date
+		, GETDATE() ----> Scripture_Update_Date
+		)
 ;
 GO
 		
@@ -225,6 +234,34 @@ VALUES (
 			walk a path to destruction. 
 			' ----> Note_Text
 		, '2019-08-30' ----> Note_Input_Date
+		, GETDATE() ----> Note_Update_Date
+		)
+		, (
+		10006 ----> Scripture_Note_Id
+		, 10005 ----> Scripture_Id
+		, 'I have been pondering this phrase all morning. As of late there is another
+			phrase that I have struggled with and that is ''Do your best.'' I find it 
+			hard to always know if I am really doing my best. I feel like I could always
+			be doing better. So where this phrase says to try your best, it leaves me
+			worried that maybe I did not do my best. But reading the phrase this morning
+			of ''whatsoever things were possible for us,'' it made me think of how it was
+			valid for Nephi to not take things that were out of his control or that by
+			so doing so it would cause problems. There were valid reasons for him to only
+			take certain things and leave others. So doing what we could would mean doing things 
+			except when	there was a valid reason that we shouldn''t or couldn''t. But then it 
+			can become tricky to desitinguish between a valid reason and an excuse. But as I 
+			continued on pondering on this, I realized that my morning commute was a good example. 
+			The first bus that I had taken had delayed about a minute longer than usual, and I 
+			missed my connecting train by a	few seconds. I felt as if I had failed, because I 
+			missed the train that I needed. It was a feeling of frustration and knowing that I 
+			could not make up for the error that had occured. But I had done what was possible 
+			on my end. So I should not feel these negative feelings. I guess, that where I ended 
+			up with this is, if there is something more that I can do on my part than I can continue 
+			to work on improving my performance. But if it is not possible, I should not beat myself 
+			up about it, just focus on what is possible for me to do. The key to this found in
+			the word, ''possible''.
+			' ----> Note_Text
+		, '2019-09-30' ----> Note_Input_Date
 		, GETDATE() ----> Note_Update_Date
 		)
 ;
@@ -456,6 +493,34 @@ VALUES (
 		, 10004 ----> Scripture_Id
 		, 'Saved' ----> Topic_Text
 		, '2019-08-30' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10021 ----> Scripture_Topic_Id
+		, 10005 ----> Scripture_Id
+		, 'Possible' ----> Topic_Text
+		, '2019-09-03' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10022 ----> Scripture_Topic_Id
+		, 10005 ----> Scripture_Id
+		, 'Best' ----> Topic_Text
+		, '2019-09-03' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10023 ----> Scripture_Topic_Id
+		, 10005 ----> Scripture_Id
+		, 'Frustration' ----> Topic_Text
+		, '2019-09-03' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10024 ----> Scripture_Topic_Id
+		, 10005 ----> Scripture_Id
+		, 'Discouragement' ----> Topic_Text
+		, '2019-09-03' ----> Topic_Input_Date
 		, GETDATE() ----> Topic_Update_Date
 	)
 ;

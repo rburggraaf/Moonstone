@@ -152,6 +152,15 @@ VALUES (
 		, '2019-09-03' ----> Scripture_Input_Date
 		, GETDATE() ----> Scripture_Update_Date
 		)
+		, (
+		10006 ----> Scripture_Id
+		, '2 Nephi 5:11' ----> Scripture_Reference
+		, 'And the Lord was with us; and we did prosper exceedingly...
+			' ----> Scripture_Text
+		, 10005 ----> Scripture_Rating_Id
+		, '2019-09-04' ----> Scripture_Input_Date
+		, GETDATE() ----> Scripture_Update_Date
+		)
 ;
 GO
 		
@@ -261,7 +270,17 @@ VALUES (
 			up about it, just focus on what is possible for me to do. The key to this found in
 			the word, ''possible''.
 			' ----> Note_Text
-		, '2019-09-30' ----> Note_Input_Date
+		, '2019-09-03' ----> Note_Input_Date
+		, GETDATE() ----> Note_Update_Date
+		)
+		, (
+		10007 ----> Scripture_Note_Id
+		, 10006 ----> Scripture_Id
+		, 'The Lord does play an intricate part of our lives. He can be a lot close than we think, 
+			if we let him. We are put into situations that help us develope eternal characteristics.
+			He helps us to be successful in our lives, but we must see this as eternal success.
+			' ----> Note_Text
+		, '2019-09-04' ----> Note_Input_Date
 		, GETDATE() ----> Note_Update_Date
 		)
 ;
@@ -343,6 +362,22 @@ VALUES (
 			wherefore, they did hearken unto my words.
 			' ----> Link_Text
 		, '2019-08-30' ----> Link_Input_Date
+		, GETDATE() ----> Link_Update_Date
+		)
+		, (
+		10006 ----> Scripture_Link_Id
+		, 10006 ----> Scripture_Id
+		, 'By Divine Design, Elder Rasband, Oct 2017' ----> Link_Reference
+		, 'Each of us is precious and loved by the Lord, who cares, who whispers, and who watches
+			over us in ways unique to each of us. He is infinitely wiser and more powerful
+			than mortal men and women. He knows our challenges, our triumphs, and the righteous
+			desires of our hearts...
+			The Lord loves to be with us. It is no coincidence that when you are feeling His Spirit
+			and acting on first promptings that you feel Him as He promised: ''I will go before 
+			your face. I will be on your right hand and on your left, and my Spirit shall be in your 
+			hearts, and mine angels round about you, to bear you up.'' (D & C 84:88)
+			' ----> Link_Text
+		, '2019-09-04' ----> Link_Input_Date
 		, GETDATE() ----> Link_Update_Date
 		)
 ;
@@ -521,6 +556,41 @@ VALUES (
 		, 10005 ----> Scripture_Id
 		, 'Discouragement' ----> Topic_Text
 		, '2019-09-03' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10025 ----> Scripture_Topic_Id
+		, 10006 ----> Scripture_Id
+		, 'Discouragement' ----> Topic_Text
+		, '2019-09-04' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10026 ----> Scripture_Topic_Id
+		, 10006 ----> Scripture_Id
+		, 'Success' ----> Topic_Text
+		, '2019-09-04' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10027 ----> Scripture_Topic_Id
+		, 10006 ----> Scripture_Id
+		, 'Help' ----> Topic_Text
+		, '2019-09-04' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10028 ----> Scripture_Topic_Id
+		, 10006 ----> Scripture_Id
+		, 'God''s Love' ----> Topic_Text
+		, '2019-09-04' ----> Topic_Input_Date
+		, GETDATE() ----> Topic_Update_Date
+	)
+	, (
+		10029 ----> Scripture_Topic_Id
+		, 10006 ----> Scripture_Id
+		, 'With God' ----> Topic_Text
+		, '2019-09-04' ----> Topic_Input_Date
 		, GETDATE() ----> Topic_Update_Date
 	)
 ;

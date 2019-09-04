@@ -146,11 +146,16 @@ VALUES (
     10007 ----> Idea_Thought_Id
     , 'BHooked Podcast, Color Theory and Chochet, 4/24/2019' ----> Idea_Thought_Reference
     , 'Colors' ----> Idea_Thought_Topic
-    , '' ----> Idea_Thought_Title
+    , 'Colors for Projects' ----> Idea_Thought_Title
     , 'Find the perfect color pallet for your project. This blends arts and science. Colors 
         can help us feel things. As you look at old finished projects there are personal 
         memories attached to them. You are creating a memoir. The color wheel help develop
-        color harmonies. 
+        color harmonies. Primary colors: Red, Blue, Yellow. Complementary colors: opposite
+        to each other on the color wheel. This is for very distinct contrast. 
+        Red: Passion and love and anger. Orange: Energy. Yellow: Hope, laughter, happiness
+        Green: Health, wealth and new beginnings. Blue: Calmness, trust. Puple: Royalty, 
+        Creativity, and soothing. Main color: Black, Gray, Tan, White. Main colors pair 
+        with anything. 
         ' ----> Idea_Thought_Text
     , 'Inma' ----> Idea_Thought_Share_With
     , 5 ----> Idea_Thought_Ranking

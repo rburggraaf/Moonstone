@@ -356,6 +356,19 @@ VALUES (
 	, '2019-09-04' ----> Talent_Session_Input_Date
 	, GETDATE() ----> Talent_Session_Update_Date
     )
+    , (
+    10010 ----> Talent_Session_Id
+    , 10008 ----> Talent_List_Id
+    , 10007 ----> Talent_Project_Id
+    , 0 ----> Talent_Session_Guest_Adim_Key
+    , 0 ----> Talent_Session_Note_Id
+    , 1 ----> Talent_Session_Person_Count
+    , '2019-09-04 08:00:00' ----> Talent_Session_Begin_DateTime
+    , 240 ----> Talent_Session_Time_Duration_Min
+    , 1 ----> Talent_Session_Enjoyment_Ranking
+	, '2019-09-04' ----> Talent_Session_Input_Date
+	, GETDATE() ----> Talent_Session_Update_Date
+    )
 ;
 GO
 
@@ -447,6 +460,13 @@ VALUES (
     10005 ----> Talent_Project_Id
     , 'Green and White Scarf' ----> Talent_Project_Name
 	, 'For the homeless project'----> Talent_Project_Descr
+	, '2019-09-04' ----> Talent_Project_Input_Date
+	, GETDATE() ----> Talent_Project_Update_Date
+    )
+    , (
+    10007 ----> Talent_Project_Id
+    , 'Idea Tables' ----> Talent_Project_Name
+	, 'Moonstone'----> Talent_Project_Descr
 	, '2019-09-04' ----> Talent_Project_Input_Date
 	, GETDATE() ----> Talent_Project_Update_Date
     )
